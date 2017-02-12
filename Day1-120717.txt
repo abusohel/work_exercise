@@ -45,3 +45,6 @@ I am 1stest girl
 I am a girl
 I am lastest girl
 7. 
+Git exercise
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"

@@ -1,0 +1,155 @@
+#!/usr/bin/ruby -w
+#define a class
+class Pranon
+  # contractor method
+  def initialize(employee,salary)
+    @employee, @salary=employee,salary
+  end
+  #accessor methods
+  def pemployee
+    @employee
+  end
+
+  def psalary
+    @salary
+  end
+end
+#create object
+pranon =Pranon.new("sohel", 3000)
+
+#use accessor method
+a=pranon.pemployee()
+b=pranon.psalary()
+
+puts "#{a} salary is : #{b}";
+output
+sohel salary is : 3000
+
+
+
+#setter methods
+class Box
+  #constructor method
+  def initialize(w,h)
+    @width, @height=w,h
+  end
+  #accessor method
+  def getWidth
+    @width
+  end
+  def getHeight
+    @height
+  end
+  #setter methods
+  def setWidth=(value)
+    @width=value
+  end
+  def setHeight=(value)
+    @height=value
+  end
+end
+
+#object
+bob=Box.new(20,30)
+#setter methods
+bob.setWidth =40
+bob.setHeight =50
+#use accessor method
+a=bob.getWidth()
+b=bob.getHeight()
+puts "width #{a} Height #{b}";
+width 40 Height 50
++
+
+
+class Box
+  #constructor method
+  def initialize(w,h)
+    @width, @height=w,h
+  end
+  #accessor method
+  def getArea
+    @width * @height
+  end
+end
+
+#object
+bob=Box.new(20,30)
+b=bob.getArea()
+
+puts "Aera of the box #{b}";
+Aera of the box 600
+
+class Box
+  @@count=0
+  def initialize(w,h)
+    @width, @height=w,h
+    @@count+=1
+  end
+  def self.printCount()
+    puts "Box count is : #@@count"
+  end
+end
+box1=Box.new(10,20)
+box2=Box.new(100,20)
+box3=Box.new(102,20)
+box4=Box.new(10,230)
+Box.printCount()
+count=4
+
+
+inheritence
+# define a class
+class Box
+   # constructor method
+   def initialize(w,h)
+      @width, @height = w, h
+   end
+   # instance method
+   def getArea
+      @area = @width * @height
+      puts "Big box aaaa area is : #@area"
+   end
+end
+
+# define a subclass
+class BigBox < Box
+
+   # add a new instance method
+   def printArea
+      @area = @width * @height
+      puts "Big box area is : #@area"
+   end
+end
+
+# create an object
+box = BigBox.new(10, 20)
+
+# print the area
+box.printArea()
+box.getArea() 
+
+
+
+# define a class
+class Box
+   BOX_COMPANY = "TATA Inc"
+   BOXWEIGHT = 10
+   # constructor method
+   def initialize(w,h)
+      @width, @height = w, h
+   end
+   # instance method
+   def getArea
+      @width * @height
+   end
+end
+
+# create an object
+box = Box.new(10, 20)
+
+# call instance methods
+a = box.getArea()
+puts "Area of the box is : #{a}"
+puts Box::BOX_COMPANY
+puts "Box weight is: #{Box::BOXWEIGHT}"

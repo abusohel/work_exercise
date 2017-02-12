@@ -1,0 +1,47 @@
+1. Ruby installer
+https://rubyinstaller.org/downloads/
+
+2. ruby mine install for windows
+https://www.jetbrains.com/ruby/download/#section=windows-version
+
+3.test a simple code in ruby mine
+
+code: puts "Hello, Ruby!";
+Output : Hello, Ruby!
+
+4.Then follow this site for learning basic to advanced Ruby
+https://www.tutorialspoint.com/ruby/ruby_classes.htm
+
+5. #!/usr/bin/ruby -w
+print <<EOF
+This is Ruby
+EOF
+print <<"foo", <<"bar"
+   I am Ruby
+foo
+      Oh, yah! I am sohel
+bar
+print <<'EOC'
+echo hi ruby...
+echo hi sohel...
+EOC
+output :This is Ruby
+   I am Ruby
+      Oh, yah! I am sohel
+echo hi ruby...
+echo hi sohel...
+
+6. 
+#!/usr/bin/ruby -w
+puts "I am a girl";
+END{
+  puts "I am lastest girl";
+}
+BEGIN{
+  puts "I am 1stest girl";
+}
+output:
+I am 1stest girl
+I am a girl
+I am lastest girl
+7. 

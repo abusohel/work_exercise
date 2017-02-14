@@ -56,9 +56,19 @@ nil: Value representing undefined.
 __FILE__: The name of the current source file.
 
 __LINE__: The current line number in the source file
-
+ary = [  "fred", 10, 3.14, "This is a string", "last element", ]
+ary.each do |i|
+  puts i
+end
 ======Array=====
 ary = [  "fred", 10, 3.14, "This is a string", "last element"]
 ary.each do |i|
   puts i
+end
+
+
+Hash value
+hsh = colors = { "red" => 0xf00, "green" => 0x0f0, "blue" => 0x00f }
+hsh.each do |key, value|
+  print key, " is ", value, "\n\n"
 end

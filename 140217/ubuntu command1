@@ -1,0 +1,81 @@
+#1: apt-get
+Useful For: Managing packages
+sudo apt install application-name
+
+sudo apt-get remove application-name
+
+sudo apt-get autoclean
+
+2: ls
+Useful For: Finding out which files are where
+ls -lh
+ls -lS
+#3: cd
+Useful For: Moving around your filesystem
+cd Pictures
+cd cats/
+Now let’s go into another folder within Pictures:
+
+cd cats/
+
+To go back to your previous directory add a hyphen suffix, like so:
+
+cd -
+
+To move back one directory add ‘..’, like so:
+
+cd ..
+
+To go back to your root/home directory simply run:
+
+cd 
+#4: sudo
+Useful For: Doing ninja stuff
+sudo edit /usr/share/applications/application.desktop
+
+sudo apt-get install application-name
+
+apt install corebird
+
+sudo !!
+#5: cat
+Useful For: Seeing what a file contains
+
+cat stands for “catenate” (no, I’ve no idea what this word means, either).
+
+The cat command read data from files and outputs its content in the terminal. Using cat is the simplest way to display file contents at the command line.
+
+Example:
+
+cat examplefile.txt
+
+To see the same file but with number lines on display pass the -n argument:
+
+cat -n examplefile.txt
+
+
+================================
+Shell Commands
+1.
+# ls
+# cd 
+# pwd
+# mkdir 
+# rmdir
+# rm
+# mv
+# man rm
+# cp r_test.txt r1_test.txt
+# shutdown ­h
+or
+# init 0
+# adduser ravi
+# passwd ravi
+# tar cvzf ravi.tar.gz *
+# tar xvzf ravi.tar.gz 
+# find / ­name ravi.txt ­print
+# grep ravi losarwar *
+# chown ravi ravi.tar.gz
+# chgrp ravi ravi.tar.gz
+# chmod 777 ravi.tar.gz
+# ifconfig

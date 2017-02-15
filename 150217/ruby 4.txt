@@ -1,0 +1,178 @@
+https://launchschool.com/books/ruby/read/loops_iterators
+https://github.com/bbatsov/ruby-style-guide#strings
+break====
+for i in 0..5
+  if i > 2 then
+    break
+  end
+
+  puts "Value of local variable is #{i}"
+end
+
+====next====
+for i in 1..10
+if i<6 then
+  next
+end
+  puts"#{i}"
+end
+
+
+====in correct..
+puts"enter the name:"
+num=gets.to_s
+
+for i in 1..num
+  puts"#{i}"
+end
+====
+
+i = 0
+loop do
+  i += 2
+  if i == 4
+    next
+  end
+  puts i
+  if i == 10
+    break
+  end
+end
+==\
+
+x = 0
+
+while x <= 10
+  if x == 7
+    break
+  elsif x.odd?
+    puts x
+  end
+  x += 1
+end
+
+
+x = 0
+
+while x <= 10
+  if x == 3
+    x += 1
+    next
+  elsif x.odd?
+    puts x
+  end
+  x += 1
+end
+=========
+names = ['Bob', 'Joe', 'Steve', 'Janice', 'Susan', 'Helen']
+x = 1
+
+names.each do |name|
+  puts "#{x}. #{name}"
+  x += 1
+end
+
+====fibo...
+def fib(num)
+  if num<2
+    num
+  else
+    fib(num-1)+fib(num-2)
+  end
+end
+puts fib(6)
+=====
+for j in 1..5 do
+  for i in 1..5 do
+    print "*",  " "
+  end
+  puts ""
+end
+
+===========
+def test
+   i = 100
+   j = 200
+   k = 300
+return i, j, k
+end
+var = test
+puts var
+===========
+
+def sample (*test)
+  puts "The number of parameters is #{test.length}"
+  for i in 0...test.length
+
+  end
+  puts "The parameters are #{test[3]}"
+end
+sample "Zara", "6", "F"
+sample "Mac", "36", "M", "MCA"
+===============
+def test
+  puts"you are tghe method"
+  yield
+  puts "You are again back of the method"
+  yield
+end
+test{puts"you are in the block"}
+
+=========MODULE.............
+
+module Week
+  FIRST_DAY = "Sunday"
+  def Week.weeks_in_month
+    puts "You have four weeks in a month"
+  end
+  def Week.weeks_in_year
+    puts "You have 52 weeks in a year"
+  end
+end
+class Decade
+  include Week
+  no_of_yrs=10
+  def no_of_months
+    puts Week::FIRST_DAY
+    number=10*12
+    puts number
+  end
+end
+d1=Decade.new
+puts Week::FIRST_DAY
+Week.weeks_in_month
+Week.weeks_in_year
+d1.no_of_months
+
+=====================
+module A
+  def a1
+    puts"a11111111111"
+  end
+  def a2
+    puts"a2222222222"
+  end
+end
+module B
+  def b1
+    puts"b11111111111"
+  end
+  def b2
+    puts"b222222222222"
+  end
+end
+
+class Sample
+  include A
+  include B
+  def s1
+    puts's11111111111'
+  end
+end
+
+samp=Sample.new
+samp.a1
+samp.a2
+samp.b1
+samp.b2
+samp.s1

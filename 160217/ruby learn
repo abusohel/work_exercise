@@ -1,0 +1,126 @@
+# Time and date
+
+time1 = Time.new
+
+puts "Current Time : " + time1.inspect
+
+# Time.now is a synonym:
+time2 = Time.now
+puts "Current Time : " + time2.inspect
+
+time1 = Time.new
+puts "Current Time : " + time1.inspect
+puts time1.year
+puts time1.month
+puts time1.day
+puts time1.wday
+puts time1.yday
+puts time1.hour
+puts time1.zone
+puts time1.usec
+
+[sec,min,hour,day,month,year,wday,yday,isdst,zone]
+
+
+# time = Time.new
+#
+# values = time.to_a
+time = Time.new
+
+puts time.strftime("%Y-%d-%m %H:%M:%S")
+# puts Time.utc(*values)
+
+
+Array and con tructor
+====================
+class NewsClass
+  def initialize(info)
+    @result=[]
+    info.each_index do|i|
+      @result[i]=info[i]
+    end
+    for i in @result# time = Time.new
+#
+# values = time.to_a
+time = Time.new
+
+puts time.strftime("%Y-%d-%m %H:%M:%S")
+# puts Time.utc(*values)
+
+      puts i
+    end
+  end
+  def shuffleArray
+    @result.shuffle!
+  end
+  def printArray
+    for i in @result
+      puts i
+    end
+  end
+end
+
+decarray=[1,2,3,4,5]
+n1=NewsClass.new(decarray)
+n1.shuffleArray
+n1.printArray
+
+=========Range===========
+$, =", "   # Array value separator
+range1 = (1..10).to_a
+range2 = ('baa'..'bat').to_a
+
+puts "#{range1}"
+puts "#{range2}"
+
+
+$, =", "   # Array value separator
+range1 = (1..10).to_a
+range2 = ('a'...'t').to_a
+range3 = range2.reverse_each.to_a
+range2=range2+range3
+
+#puts "#{range1}"
+puts "#{range2}"
+#puts "#{range3}"
+
+==========
+
+merge array
+=========
+range2 = ('a'...'t').to_a
+range3 = range2.reverse_each.to_a
+list=range2.zip(range3)
+list.each do |range2,range3|
+  p "#{range2}#{range3}"
+
+end
+
+puts "#{list}"
+score = 70
+
+result = case score
+   when 0..40 then "Fail"
+   when 41..60 then "Pass"
+   when 61..70 then "Pass with Merit"
+   when 71..100 then "Pass with Distinction"
+   else "Invalid Score"
+end
+
+puts result
+==========
+
+@names  = ["Tom", "Harry", "John"]
+@emails = ["tom@gmail.com", "h@gmail.com", "j@gmail.com"]
+@list = @names.zip( @emails )
+
+@list.each do |name,email|
+p "#{name} <#{email}>"
+end
+@urls = ["yahoo.com", "ebay.com", "google.com"]
+@names.zip( @emails, @urls ).each do |name,email,url|
+  p "#{name} <#{email}> :: #{url}"
+end
+=======================
+
+

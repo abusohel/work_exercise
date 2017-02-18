@@ -1,0 +1,119 @@
+OOp concept
+inheritance
+class Box
+  def initialize(w,h,b)
+    @width,@height,@bredth=w,h,b
+  end
+  def getArea
+    @x=@width*@height+@bredth
+    puts " Area is X: #@x"
+  end
+end
+class BoxShape < Box
+  def printBox
+    @Area=(@width+@height)*@bredth
+    puts " Area is : #@Area"
+  end
+end
+box=BoxShape.new(2,6,7)
+box.printBox()
+# ,3)box1=Box.new(2,1
+# box.BoxShape.new
+box.getArea()
+#child object theke parents k call korte parbo
+
+
+https://devblast.com/b/ruby-inheritance-encapsulation-
+
+
+============Inheritence
+
+class Document
+  def initialize; end
+
+  # logic to deal with any document
+
+  def print
+    # logic to print any kind of document
+  end
+end
+
+class XmlDocument < Document
+  # logic to deal with any document
+
+  def print
+    # logic to print a xml document
+  end
+end
+
+=================polymorphism
+
+class Document
+  def initialize
+  end
+
+  def print
+    raise NotImplementedError, 'You must implement the print method'
+  end
+end
+
+class XmlDocument < Document
+
+  def print
+    p 'Print from XmlDocument'
+  end
+
+end
+
+class HtmlDocument < Document
+
+  def print
+    p 'Print from HtmlDocument'
+  end
+
+end
+
+XmDocument.new.print # Print from XmlDocument
+HtmlDocument.new.print # Print from HtmlDocument
+
+=================encapsulation
+
+class Document
+  attr_accessor :name
+
+  def initialize(name)
+    @name = name
+  end
+
+  def set_name(name)
+    @name = name
+  end
+end
+
+d = Document.new('name1')
+d.set_name('name1')
+
+====================Module
+
+module Speak
+  def speak(sound)
+    puts "#{sound}"
+  end
+end
+
+class GoodDog
+  include Speak
+end
+
+class HumanBeing
+  include Speak
+end
+
+sparky = GoodDog.new
+sparky.speak("Arf!")        # => Arf!
+bob = HumanBeing.new
+bob.speak("Hello!")   
+
+=======
+
+

@@ -92,7 +92,47 @@ end
 
 d = Document.new('name1')
 d.set_name('name1')
+===========
+class Person
+  def initialize(name)
+    set_name(name)
+  end
 
+  def name
+    @first_name + ' ' + @last_name
+  end
+
+  def set_name(name)
+    first_name, last_name = name.split(/\s+/)
+    set_first_name(first_name)
+    set_last_name(last_name)
+  end
+
+  def set_first_name(name)
+    @first_name = name
+  end
+
+  def set_last_name(name)
+    @last_name = name
+  end
+end
+
+p = Person.new("Fred Bloggs")
+puts p.name
+
+================
+class Person
+    def initialize(name)
+        @first_name, @last_name = name.split(/\s+/)
+    end
+
+    def name
+        @first_name + ' ' + @last_name
+    end
+end
+
+p = Person.new("Fred Bloggs")
+puts p.name
 ====================Module
 
 module Speak
@@ -115,5 +155,99 @@ bob = HumanBeing.new
 bob.speak("Hello!")   
 
 =======
+
+array pass in pointer
+S
+def sample(*test)
+  puts "The no. of #{test.length}"
+  for i in 0...test.length
+    puts "the parameters ase #{test[i]}"
+  end
+  (0..10).step(2).reverse_each do |i|
+    puts i
+  end
+end
+sample "sohel","26","M"
+
+=====================To_s method
+
+class Box
+  def initialize(w,h)
+    @w=w
+    @h=h
+  end
+  def to_s
+    return "Width is #{@w} Height is #{@h}"
+  end
+
+end
+box=Box.new(10,20)
+# puts"#{box}"
+puts box
+
+============attr_accessor=seter,geter==
+
+class Box
+  attr_accessor :width, :height
+end
+myb=Box.new
+myb.width =10
+myb.height =5
+
+puts myb.width*myb.height
+
+attr_accessor:width, :height
+attr_reader:width, :height
+attr_writer:width, :height
+
+===
+class Animal
+  #setter
+  attr_reader :name, :age, :trait
+
+  #getter
+  attr_writer :name, :age, :trait
+end
+first_animal=Animal.new
+first_animal.name="sohel"
+first_animal.age="25"
+first_animal.trait="ggg"
+puts first_animal.name
+puts first_animal.age
+puts first_animal.trait
+
+
+class Animal
+  #setter
+  attr_reader :name, :age, :trait
+  def initialize(name,age,trait)
+    @name =name
+    @age =age
+    @trait =trait
+  end
+  def printFunct
+    puts name
+    puts age
+    puts trait
+  end
+  #getter
+  attr_writer :name, :age, :trait
+end
+first_animal=Animal.new("Sohel",25,"ahsdfkjjsdf")
+first_animal.printFunct
+=============================
+class Animal
+attr_accessor :name, :age, :trait
+end
+first_animal=Animal.new
+first_animal.name="sohel"
+first_animal.age="25"
+first_animal.trait="ggg"
+puts first_animal.name
+puts first_animal.age
+puts first_animal.trait
+
+======================
+
 
 

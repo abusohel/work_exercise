@@ -1,0 +1,181 @@
+# age=10
+# puts" you are too young to use this system" if age<18
+# age=24
+# puts"You are a teenager" if age>12 && age<25
+#  age=24
+#  puts"You are not a teenager" unless age>12 && age<20
+#  age=24
+#  puts"You are 24!" if age==24
+# age=24
+# puts"You are 24!" if age<=>24
+# 5.times do
+#   puts "sohel"
+# end
+# 5.times{puts"sohel"}
+# 1.upto(3){puts"ruby"}
+# 4.downto(2){puts"rails"}
+# 1.step(10,2){puts"ruby on rails"}
+# 1.upto(5)do |number |
+#   puts number
+# end
+# puts 10/3
+# puts 10.0/3
+# puts 5.7.to_i
+# puts "hello      hjkj".length
+# x=%q{This is a test of multiline capabilities}
+# x=%q!This is a test of multiline capabilitie!
+# puts x
+# x=<<END_MY_STRING_PLEASE
+# This is the string And a second line
+# END_MY_STRING_PLEASE
+# puts x
+# puts "ruby "*3
+# puts 'c'.ord
+# puts 'A'.ord
+# puts 'a'.bytes
+# puts "It's a #{"ghh " * 5} world"
+# puts "Aa".sum
+# puts "foobarbar".sub('bar','')
+# puts "foobarbar".sub!('bar','foo')
+# puts "foobarbar".gsub('bar','')
+# puts "foobarbar".gsub!('bar','b')
+#  puts "this is a test".gsub(' ',' ')
+# puts "foobarbar".gsub!('bar','b')
+# puts "I am ruby".sub(/^../,'Hello! i')
+# puts "foobarbar".sub(/..$/,'foio')
+# "xyhdkfgjdxghz".scan(/.../){|x| puts x}
+# "xyhdkfgjdxghz".scan(/\w\w\w\w/){|x| puts x}
+# "xyhdkf454dt545h4t54gjdxghz".scan(/\d*/){|x| puts x}
+# "xyhdkf454dt545h4t54gjdxghz".scan(/\d+/){|x| puts x}
+
+# "This is a test".scan(/[aeiou]/) {|x| puts x}
+# "This is a test".scan(/[a-d]/) {|x| puts x}
+# puts "String contains has vowels" if "this is a test"=~/[aeiou]/
+# puts "String contains has vowels" unless "this is a test"=~/[0-9]/
+# puts "String contains has vowels" if "this is a test".match(/[aeiou]/)
+# x="This is a test".match(/(\w+) (\w+)/)
+# puts x
+# x=["Word","play","Fun"]
+# puts x.join(', ')
+# puts "This is a test".scan(/\w\w/).join(',')
+# puts"Short sentence.hdjf.sd s.sdf.sf.".split(/\./)
+# puts"Short sentence.hdjf.sd s.sdf.sf.".split(/\./).inspect
+# p "Short sentence.hdjf.sd s.sdf.sf.".split(/\s+/)
+# [1, "TEST", 7].each {|x| puts x.to_s+" Ruby".inspect}
+# [1,2,3,4].collect{|x| puts x*2}
+#  x=[1,2,3]
+# p x.include?("x")
+# p x.include?(2)
+# puts x.first
+# puts x.last
+# puts x.join("-")
+# puts x.first(2).join("-")
+# puts x.reverse
+# puts x.reverse.inspect
+# p x.reverse.inspect
+# p x.reverse
+# dic={'cat'=>'feline animal','dog'=>'canine animal'}
+# puts dic.length
+# puts dic.size
+# puts dic['cat']
+# x={"a"=>26,"b"=>43,"c"=>9}
+# #x.each{|key, value| puts "#{key} equals #{value}"}
+# p x.values
+# p x.keys
+# x.delete("a")
+# p x
+# x.delete_if{|key, value|value<25}
+# p x
+# people = {
+#     'fred' => {
+#         'name' => 'Fred Elliott',
+#         'age' => 63,
+#         'gender' => 'male',
+#         'favorite painters' => ['Monet', 'Constable', 'Da Vinci']
+#     },
+#     'janet' => {
+#         'name' => 'Janet S Porter',
+#         'age' => 55,
+#         'gender' => 'female'
+#     }
+# }
+# puts people['fred']['age']
+# puts people['janet']['gender']
+# p people['janet']
+# puts people['fred']['favorite painters'].length
+# puts people['fred']['favorite painters'].join(", ")
+# age = 10
+# type = age < 18 ? "child" : "adult"
+# puts "You are a " + type
+# age = 10
+# type = 'child' if age < 18
+# type = 'adult' unless age < 18
+# puts "You are a " + type
+# age = 10
+# if age < 18
+#   type = 'child'
+# else
+#   type = 'adult'
+# end
+# puts "You are a " + type
+# x = 1
+# while x < 100
+#   puts x
+#   x = x *2
+# end
+# x = 1
+# until x > 99
+#   puts x
+#   x = x * 2
+# end
+# i = 1
+# i = i * 2 until i > 1000
+# puts i
+
+
+# def each_vowel(&code_block)
+#   %w{a e i o u}.each { |vowel| code_block.call(vowel) }
+# end
+# each_vowel { |vowel| puts vowel }
+
+
+# def each_vowel
+#   %w{a e i o u}.each { |vowel| yield vowel }
+# end
+# each_vowel { |vowel| puts vowel }
+
+# print_parameter_to_screen = lambda { |x| puts x }
+# print_parameter_to_screen.call(100)
+# puts Time.new
+# puts Time.now
+# puts Time.now - 10
+# puts Time.now + 86400
+# class Fixnum
+#   def seconds
+#     self
+#   end
+#   def minutes
+#     self * 60
+#   end
+#   def hours
+#     self * 60 * 60
+#   end
+#   def days
+#     self * 60 * 60 * 24
+#   end
+# end
+#
+# puts Time.now
+# puts Time.now + 10.minutes
+# puts Time.now + 16.hours
+# puts Time.now - 7.days
+# epoch_time = Time.gm(2007, 5).to_i
+# t = Time.at(epoch_time)
+# puts t.year, t.month, t.day
+# rice_on_square = 1
+# 64.times do |square|
+#   puts "On square #{square + 1} are #{rice_on_square} grain(s)"
+#   rice_on_square *= 2
+# end
+puts 1073741823.class
+

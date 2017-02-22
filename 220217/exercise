@@ -51,3 +51,129 @@ data=[1,4.5,8.2, "sohel", "ruby"]
 
 puts data
 =====================================
+Encapsulation means that the internal representation of an object is hidden from the outside. Only the object can interact with its internal data. Public methods can be created to open a defined way to access the logic inside an object.
+
+
+  module Module2
+    class Test
+      def initialize
+        puts "test class object created"
+      end
+      def mymethod
+        puts "it is a user defined method"
+      end
+    end
+  end
+
+  module A
+    def a1
+      puts "module A metho a1"
+    end
+    def a2
+      puts "module A metho a2"
+    end
+  end
+  module B
+    def b1
+      puts "module B metho b1"
+    end
+    def b2
+      puts "module B metho b2"
+    end
+  end
+  class Sample
+    include A
+    include B
+    def s1
+      puts "This is a class"
+    end
+  end
+
+++++++++++++++++++++++++++++++++
+# class Square
+#   def initialize(slide_length)
+#     @slide_length=slide_length
+#   end
+#   def area
+#     @slide_length*@slide_length
+#   end
+# end
+# a=Square.new(10)
+# puts a.area
+
+# class Square
+#   def self.test_method
+#     puts "this is self test method"
+#
+#   end
+#   def test_method
+#     puts "this is test method"
+#   end
+# end
+# Square.test_method
+# a=Square.new
+# a.test_method
+
+# require_relative("extra")
+# require_relative("extra1")
+# module Trig
+#   PI = 3.141592654
+#   def Trig.sin(x)
+#     puts Math.sin(x)
+#   end
+#   def Trig.cos(x)
+#     puts Math.cos(x)
+#
+#   end
+# end
+#
+# module Moral
+#   VERY_BAD = 1
+#
+#   def Moral.sin(badness)
+#     if(badness==0)
+#       puts "very bad"
+#     else
+#       puts "just bad"
+#     end
+#   end
+# end
+
+# puts Trig::PI
+# Trig.cos(0)
+#
+# Moral.sin(Moral::VERY_BAD)
+# m=Module2::Test.new
+# m.mymethod
+#
+# module A
+#   def a1
+#     puts "module A metho a1"
+#   end
+#   def a2
+#     puts "module A metho a2"
+#   end
+# end
+# module B
+#   def b1
+#     puts "module B metho b1"
+#   end
+#   def b2
+#     puts "module B metho b2"
+#   end
+# end
+# require_relative("extra1")
+# class Sample
+#   include A
+#   include B
+#   def s1
+#     puts "This is a class"
+#   end
+# end
+
+# samp=Sample.new
+# samp.a1
+# samp.a2
+# samp.b1
+# samp.b2
+# samp.s1

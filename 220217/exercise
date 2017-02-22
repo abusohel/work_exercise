@@ -1,0 +1,53 @@
+# box=[]
+# 10.times do |row|
+#   box[row]=[]
+#   10.times do
+#     box[row]<<0
+#   end
+# end
+# for row in box
+#   puts (row.inspect)
+# end
+# puts (0..5).map{rand(0..10)}
+
+#==============================S
+# class Menu
+#   attr_accessor :length_quit
+#   def initialize(*menu_args)
+#     @menu_args=menu_args
+#     @length_quit=@menu_args.length
+#   end
+#   def get_menu_choice
+#     #print the menu
+#     @menu_args.each_with_index do |item, index|
+#       puts "#{index+1}.#{item}"
+#     end
+#     print "Please Place ur Order Sir ..!!"
+#     user_choice=gets.to_i
+#     return user_choice
+#   end
+#
+# end
+# menu=Menu.new("Pizza", "Burger", "Sandwice","Juice","Quit")
+# while ((choice=menu.get_menu_choice)!=menu.length_quit)
+#   case choice
+#     when 1
+#       puts "Please Wait !!Your Order Pizza has been placed ..!!"
+#     when 2
+#       puts "Please Wait !!Your Order Burger has been placed ..!!"
+#     when 3
+#       puts "Please Wait !!Your Order Sandwice has been placed ..!!"
+#     when 4
+#       puts "Please Wait !!Your Order Juice has been placed ..!!"
+#
+#   end
+# end
+
+#===================
+data=[1,4.5,8.2, "sohel", "ruby"]
+#data << "abu"
+
+ #data.pop
+
+puts data
+=====================================

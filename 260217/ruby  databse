@@ -1,0 +1,530 @@
+https://gorails.com/setup/ubuntu/16.04
+http://blog.teamtreehouse.com/installing-rails-5-linux
+http://ruby-doc.org/core-2.4.0/
+http://www.zenspider.com/ruby/quickref.html#32
+
+
+
+# class Shape
+#
+# end
+#  class Square < Shape
+#    def initialize(side_length)
+#      @side_length=side_length
+#    end
+#    def area
+#      @side_length*@side_length
+#    end
+#    def perimeter
+#      @side_length*4
+#    end
+#  end
+# class Triangle < Shape
+#   def initialize(base_width,height,side1,side2,side3)
+#     @base_width=base_width
+#     @height=height
+#     @side1=side1
+#     @side2=side2
+#     @side3=side3
+#   end
+#   def area
+#     @base_width*@height/2
+#   end
+#   def perimeter
+#     @side1+@side2+@side3
+#   end
+# end
+# # puts area_of_triangle(6,6)
+# # puts perimeter_of_square(5)
+# my_square=Square.new(5)
+# my_Triangle=Triangle.new(6,6,7.81,7.81,7.81)
+# puts my_square.area
+# puts my_square.perimeter
+# puts my_Triangle.area
+# puts my_Triangle.perimeter
+#=============================
+
+# def basic_method
+#   puts $x
+# end
+# $x = 10
+# def basic_method
+#   puts $x
+# end
+# $x = 10
+# basic_method
+#==============================
+# class Square
+#   def initialize
+#     if defined?(@@number_of_squares)
+#       @@number_of_squares += 1
+#     else
+#       @@number_of_squares = 1
+#     end
+#   end
+#   def self.count
+#     @@number_of_squares
+#   end
+# end
+# a = Square.new
+# b = Square.new
+# b = Square.new
+# puts Square.count
+
+#===========================Inheritanc=========
+# class Parentclass
+#   def method1
+#     puts "This is method 1 in parent class"
+#   end
+#   def method2
+#     puts "this is method 2 ion parent class"
+#   end
+# end
+# class Childclass < Parentclass
+#   def method3S
+#     puts "This is method 1 in chil class"
+#   end
+#   def method2
+#     puts "This is method 2 in child class"
+#   end
+# end
+# my_object=Childclass.new
+# my_object.method1
+# my_object.method2
+
+#===========================
+# class Person
+#   def initialize(name)
+#     @name=name
+#   end
+#   def name
+#     return @name
+#   end
+# end
+# class Doctor < Person
+#   def name
+#     "Dr. "+super
+#   end
+# end
+#===========================
+# class Dog
+#   def talk
+#     puts "Woof!"
+#   end
+# end
+# my_dog = Dog.new
+# my_dog.talk
+# class Dog
+#   def talk
+#     puts "Howl!"
+#   end
+# end
+# my_dog.talk
+#===============================
+# a = "This is a test"
+# puts a.methods.join(' ')
+#==================================
+# class Person
+#   attr_accessor :name, :age
+# end
+# p=Person.new
+# p.name ="Sohel"
+# p.age=20
+# puts p.instance_variables
+# ========================Encapsulation
+# class Person
+#   def initialize(name)
+#     set_name(name)
+#   end
+#   def name
+#     @first_name+' '+@last_name
+#   end
+#   def set_name(name)
+#     first_name, last_name=name.split(/\s+/)
+#     set_first_name(first_name)
+#     set_last_name(last_name)
+#   end
+#   def set_first_name(name)
+#     @first_name=name
+#   end
+#   def set_last_name(name)
+#     @last_name=name
+#   end
+# end
+
+#p=Person.new("Abu Sohel")
+#puts p.name
+#p.set_last_name("Ruby")
+#puts p.name
+#===============encapsulation
+# define a class
+# class Box
+#   # constructor method
+#   def initialize(w,h)
+#     @width, @height = w, h
+#   end
+#
+#   # instance method by default it is public
+#   def getArea
+#     getWidth() * getHeight
+#   end
+#
+#   # define private accessor methods
+#   def getWidth
+#     @width
+#   end
+#   def getHeight
+#     @height
+#   end
+#   # make them private
+#   private :getWidth, :getHeight
+#
+#   # instance method to print area
+#   def printArea
+#     @area = getWidth() * getHeight
+#     puts "Big box area is : #@area"
+#   end
+#   # make it protected
+#   protected :printArea
+# end
+#
+# # create an object
+# box = Box.new(10, 20)
+#
+# # call instance methods
+# a = box.getArea()
+# puts "Area of the box is : #{a}"
+#
+# # try to call protected or methods
+# box.printArea()
+#===========polymorphism==========
+# class Animal
+#   attr_accessor :name
+#   def initialize(name)
+#     @name = name
+#   end
+#   def talk
+#     "Meaow!"
+#   end
+# end
+# class Cat < Animal
+#   def talk
+#     "Meaow!"
+#   end
+# end
+# class Dog < Animal
+#   def talk
+#     "Woof!"
+#   end
+# end
+# animals = [Cat.new("Flossie"), Dog.new("Clive"), Cat.new("Max"),Animal.new("ss")]
+# animals.each do |animal|
+#   puts animal.talk
+#   end
+#===========nested===========
+# class Drawing
+#   def Drawing.give_me_a_circle
+#     Circle.new
+#   end
+#   class Line
+#   end
+#   class Circle
+#     def what_am_i
+#       "This is a circle"
+#     end
+#   end
+# end
+# a = Drawing.give_me_a_circle
+# puts a.what_am_i
+# a = Drawing::Circle.new
+# puts a.what_am_i
+# a = Circle.new
+# puts a.what_am_i
+#======contants
+# def circumference_of_circle(radius)
+#   2 * Pi * radius
+# end
+# Pi = 3.141592
+# puts circumference_of_circle(10)
+#W======modules
+# module ToolBox
+#   class Ruler
+#     attr_accessor :length
+#   end
+# end
+# module Country
+#   class Ruler
+#     attr_accessor :name
+#   end
+# end
+# a = ToolBox::Ruler.new
+# a.length = 50
+# b = Country::Ruler.new
+# b.name = "Ghengis Khan from Moskau"
+#===============
+# module AnotherModule
+#   def do_stuff
+#     puts "This is a test"
+#   end
+# end
+# include AnotherModule
+# do_stuff
+#=============
+# [1,2,3,4,5].each { |number| puts number }
+#==largest word
+# my_array = %Q{this is a test of the longest word check}
+# puts my_array
+# longest_word = ''
+# my_array.each do |word|
+#   longest_word = word if longest_word.length < word.length
+# end
+# puts longest_word
+#=====large number
+# my_array=%w{15 16 48 58 65 574 45}
+# highest_number=0
+# my_array.each do |num|
+#   num1=num.to_i
+#   highest_number=num1 if num1 >highest_number
+# end
+# puts highest_number
+
+#======
+# puts [1,2,3,4].collect{|i|i.to_s+"X"}.inspect
+# p [1,2,3,4].collect{|i|i.to_s+"X"}
+# puts [1,2,3,4].detect{|i| i.between?(2,3)}
+# p [1,2,3,4].select{|i| i.between?(2,3)}
+# p [2,58,7,1].sort
+# p [2,58,7,1].max
+# p [2,58,7,1].min
+# class AlVowels
+#   @@vowels=%w{a e i o u}
+#   def each
+#     @@vowels.each{|v| yield v}
+# end
+# end
+# x=AlVowels.new
+# # x.each {|v| puts v}
+#  puts x.collect { |i| i + "x" }
+# p  x.select { |i| i > "j" }
+# x.sort
+
+#======================================================
+# class Dungeon
+#   attr_accessor :player
+#
+#   def initialize(player_name)
+#     @player=Player.new(player_name)
+#     @rooms=[]
+#   end
+#
+#   class Player
+#     attr_accessor :name, :location
+#
+#     def initialize(player_name)
+#     @name=player_name
+#     end
+#   end
+#
+#   class Room
+#     attr_accessor :reference, :name, :description, :connections
+#
+#     def initialize(reference, name, description, connections)
+#       @reference=reference
+#       @name=name
+#       @description=description
+#       @connetions=connections
+#     end
+#   end
+# end
+# my_dungeon=Dungeon.new("Abu Sohel")
+# puts my_dungeon.player.name
+
+# Person=Struct.new(:name,:gender,:age)
+# fred=Person.new("fred", "male", 50)
+# Chris=Person.new("Chris", "male", 20)
+# puts fred.age+Chris.age
+
+# class Person
+#   attr_accessor :name, :gender, :age
+#
+#   def initialize(name, gender, age)
+#     @name=name
+#     @gender=gender
+#     @age=age
+#   end
+# end
+# fred=Person.new("fred", "male", 50)
+# Chris=Person.new("Chris", "male", 20)
+# puts fred.age+Chris.age
+
+# class Dungeon
+#   attr_accessor :player
+#
+#   def initialize(player_name)
+#     @player=Player.new(player_name)
+#     @rooms=[]
+#
+#   end
+#   Player = Struct.new(:name, :location)
+#   Room = Struct.new(:reference, :name, :description, :connections)
+# end
+# class A
+#   def public_method
+#     p "public method in A"
+#   end
+#
+#   protected
+#
+#   def protected_method
+#     p "protected method in A"
+#   end
+#
+#   private
+#
+#   def private_method
+#     p "private method in A"
+#   end
+# end
+#
+# class B < A
+#   def public_method_in_b
+#     private_method
+#     # protected_method
+#   end
+# end
+#
+# b = B.new
+# b.public_method
+# b.public_method_in_b
+# b.protected_method
+# #rescue p "Cant access protected method outside the class"
+# b.private_method
+# #rescue p "Cant access private method outside the class"
+
+#============================module
+#!/usr/bin/ruby
+
+# require_relative "abcd"
+#
+# class Decade
+#   include Week
+#   no_of_yrs=10
+#   def no_of_months
+#     puts Week::FIRST_DAY
+#     number=10*12
+#     puts number
+#   end
+# end
+# d1=Decade.new
+# puts Week::FIRST_DAY
+# Week.weeks_in_month
+# Week.weeks_in_year
+# d1.no_of_months
+# load 'abcd.rb'
+# puts "This is a test".vowels.join('-')
+
+# puts 'no interpolation'
+# puts "#{interpolation}, and backslashes\n"
+# puts %q(no interpolation)
+# puts %Q(interpolation and backslashes)
+# puts %(interpolation and backslashes)
+# puts `echo command interpretation with interpolation and backslashes`
+# puts %x(echo command interpretation with interpolation and backslashes)
+#==============
+# text = %q{Los Angeles has some of the nicest weather in the country.}
+# stopwords = %w{the a by on for of are with just but and to the my in I has some}
+# words = text.scan(/\w+/)
+# keywords = words.select { |word| !stopwords.include?(word) }
+# puts keywords.join(' ')
+#
+# text = "First-class decisions require clear-headed thinking."
+# puts "Scan method: #{text.scan(/\w+/).length}"
+# puts "Split method: #{text.split.length}"
+
+# class String
+#   def vowels
+#     self.scan(/i/)
+#   end
+# end
+
+#require_relative'abcd'
+# load 'abcd.rb'
+# puts "This is a test".vowels.join('-')
+
+# load 'abcd.rb'
+# puts "it is b"
+# load 'abcd.rb'
+# puts "it is again b"
+# $:.each { |d| puts d }
+
+# require 'net/http'
+# Net::HTTP.get_print('www.rubyinside.com', '/')
+
+# require 'net/http'
+# url = URI.parse('http://www.rubyinside.com/')
+# response = Net::HTTP.start(url.host, url.port) do |http|
+#   http.get(url.path)
+# end
+# content = response.body
+
+# Person = Struct.new(:name, :age)
+# me = Person.new("Fred Bloggs", 25)
+# me.age += 1
+# puts "#{me}"
+
+# require 'rubygems'
+# require 'RedCloth'
+# r = RedCloth.new("this is a *test* of _using RedCloth_")
+# puts r.to_html
+
+# class Person
+#   def initialize(name)
+#     raise ArgumentError, "No name present" if name.empty?
+#   end
+# end
+# fred = Person.new(' ')0
+# class String
+#   def titleize
+#     self.gsub(/\b\w/) { |letter| letter.upcase }
+#   end
+# end
+# puts "this is a test".titleize
+#
+# # raise "Fail 1" unless "this is a test".titleize == "This Is A Test"
+# #raise "Fail 2" unless "another test 1234".titleize == "Another Test 1234"
+# raise "Fail 3" unless "We're testing titleize".titleize == "We're Testing Titleize"
+
+# catch(:finish) do
+#   1000.times do
+#     x = rand(1000)
+#     throw :finish if x == 123
+#   end
+#   puts "Generated 1000 random numbers without generating 123!"
+# end
+# def generate_random_number_except_123
+#   x = rand(1000)
+#   throw :finish if x == 123
+# end
+# catch(:finish) do
+#   1000.times { generate_random_number_except_123 }
+#   puts "Generated 1000 random numbers without generating 123!"
+# end
+
+# class String
+#   def titleize
+#     self.gsub(/(\A|\s)\w/){ |letter| letter.upcase }
+#   end
+# end
+# puts "this is a test".titleize
+# raise "Fail 1" unless "this is a test".titleize == "This Is A Test"
+# raise "Fail 2" unless "another test 1234".titleize == "Another Test 1234"
+# raise "Fail 3" unless "We're testing titleize".titleize == "We're Testing Titleize"
+phone = "2004-959-559 #This is Phone Number"
+
+# Delete Ruby-style comments
+phone = phone.sub!(/#.*$/, "")
+puts "Phone Num : #{phone}"
+
+# Remove anything other than digits
+phone = phone.gsub!(/\D/, "")
+puts "Phone Num : #{phone}"

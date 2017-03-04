@@ -1,0 +1,83 @@
+if RUBY_PLATFORM =~ /win32/
+  puts "It is in windows platform"
+elsif RUBY_PLATFORM =~ /linux/
+  puts "It is in Linux platform"
+else
+  puts "No Platform"
+end
+=============
+# class String
+#   def sentences
+#     gsub(/\n|\r/, ' ').split(/\.\s*/)
+#   end
+# end
+# p %q{Hello fhh xdfhdzfgj. This is a test of
+# basic sentence splitting. It
+# even works over multiple lines.}.sentences
+# class String
+#   def words
+#     scan(/\w[\w\'\-]*/)
+#   end
+# end
+# p "This is a test of words's capabilities".words
+# class String
+#   def sentences
+#     gsub(/\n|\r/, ' ').split(/\.\s*/)
+#   end
+# end
+# class String
+#   def words
+#     scan(/\w[\w\'\-]*/)
+#   end
+# end
+# p "This is a test of words' capabilities".words
+# p %q{Hello. This is a test of
+# basic sentence splitting. It
+# even works over multiple lines}.sentences[2].words[3]
+# class String
+#   def sentences
+#     gsub(/\n|\r/, ' ').split(/\.\s*/)
+#   end
+#
+#   def words
+#     scan(/\w[\w\'\-]*/)
+#   end
+# end
+# hot_words = %w{test ruby}
+# my_string = "This is a test. Dull sentence here. Ruby is great. So is cake."
+# my_string.sentences.find_all do |s|
+#   t=s.downcase.words.any? { |word| hot_words.include?(word) }
+#    puts t
+# end
+===============================
+class WordPlay
+  def self.switch_pronouns(text)
+    text.gsub(/\b(I am|You are|I|You|Me|Your|My)\b/i) do |pronoun|
+      case pronoun.downcase
+        when "i"
+          "You"
+        when "i am"
+          "You are"
+        when "you are"
+          "I am"
+        when "your"
+          "My"
+        when "my"
+          "your"
+        when "you"
+          "me"
+        when "me"
+          "you"
+      end
+
+  end.sub(/^me\b/i, 'i')
+
+  end
+
+end
+x=WordPlay.switch_pronouns("Your cat is fighting with my cat.You are my robot.My cat is fighting with you.I gave you hope.I gave you hope")
+puts x
+while input = gets
+  puts '>> ' + WordPlay.switch_pronouns(input).chomp + '?'
+end
+======================

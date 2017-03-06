@@ -1,0 +1,42 @@
+http://blog.teamtreehouse.com/installing-rails-5-linux
+https://gorails.com/setup/ubuntu/16.04
+http://guides.rubyonrails.org/getting_started.html
+
+=================Ruby Version Manager (rvm)==rvm install 2.3.1=========
+==
+sudo apt-get install curl
+==
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+\curl -sSL https://get.rvm.io | bash -s stable
+====================Ruby====================
+rvm install 2.3.1
+======================
+rvm use 2.3.1 --default
+=====================
+============================Setting your terminal for login shell===========
+===================================Rails===============
+gem install rails --version 5.0.0
+gem install rails --version 5.0.0
+
+
+
+===================================node js===============
+sudo apt-get install nodejs
+
+===============rails================
+rails server
+=========
+rails new weblog
+============
+ls
+=========
+cd weblog
+============
+ rails generate scaffold post title:string body:text
+cat db/migrate/20170304110250_create_posts.rb
+
+===================
+rails db:migrate
+cat db/schema.rb
+ rails server
+

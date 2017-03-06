@@ -1,0 +1,31 @@
+KMPlayer setup
+
+https://www.howtoinstall.co/en/ubuntu/xenial/kmplayer
+
+sudo apt-get update
+sudo apt-get install kmplayer
+
+Rubymine sedtup
+
+Steps to Install RubyMine on Ubuntu 16.04:
+
+Step 1: Login in Root
+#su -
+password:
+
+Step 2: Update the System
+#apt-get update
+
+Step 3: Install Java and Java Repositories
+#add-apt-repository ppa:webupd8team/java
+#apt-get update
+#apt-get install oracle-java8-installer
+
+Step 4: Download Rubymine software
+#wget https://download.jetbrains.com/ruby/RubyMine-2016.1.2.tar.gz
+
+Step 5: Extract and Install
+#tar -xzf RubyMine-2016.1.2.tar.gz
+#ls
+#cd bin
+#./rubymine.sh 

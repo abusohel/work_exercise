@@ -1,0 +1,11 @@
+gems in sqlite3 INSTALL
+
+//extconf.rb
+//mkmf.rb can't find header files for ruby
+
+sqlite3
+sudo apt-get install ruby-dev
+sudo gem install sqlite3-ruby
+
+$ sudo apt-get install sqlitebrowser
+

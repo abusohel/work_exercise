@@ -1,0 +1,66 @@
+2.
+Ubuntu File Structure
+All filesystems are contained within one directory hierarchy. The 
+root directory is the top level directory, and all its subdirectories 
+make up the directory hierarchy. 
+•
+/bin ­­ binary applications (most of your executable files) 
+•
+/boot ­­ files required to boot (such as the kernel, etc) 
+•
+/dev ­­ your devices (everything from drives to displays) 
+•
+/etc ­­ just about every configuration file for your system 
+•
+/etc/rc.d   ­­   contains   a   number   of   shell   scripts   that   are   run   on
+bootup at different run levels. 
+•
+/etc/X11 ­­ configuration files for the X Window system 
+•
+/home ­­ locally stored user files and folders 
+•
+/lib ­­ system libraries (similar to Program Files) 
+•
+/media   ­­   mounted   (or   loaded)   devices   such   as   cdroms,   digital
+cameras, etc. 
+•
+/mnt ­­ mounted file systems 
+•
+/opt ­­ location for “optionally” installed programs 
+•
+/sbin ­­ system­only binaries
+•
+/sys ­­ contains information about the system 
+•
+/tmp ­­ temporary files 
+•
+/usr ­­ applications mainly for regular users 
+•
+/var ­­ mainly logs, databases, etc. 
+
+4­
+Shell Commands
+1.
+# ls
+# cd 
+# pwd
+# mkdir 
+# rmdir
+# rm
+# mv
+# man rm
+# cp r_test.txt r1_test.txt
+# shutdown ­h
+or
+# init 0
+# adduser ravi
+# passwd ravi
+# tar cvzf ravi.tar.gz *
+# tar xvzf ravi.tar.gz 
+# find / ­name ravi.txt ­print
+# grep ravi losarwar *
+# chown ravi ravi.tar.gz
+# chgrp ravi ravi.tar.gz
+# chmod 777 ravi.tar.gz
+# ifconfig
+

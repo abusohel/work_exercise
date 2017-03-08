@@ -1,0 +1,20 @@
+http://www.ubuntumaniac.com/2016/02/install-latest-xampp-702-on-linjux.html
+
+ For Ubuntu 32 bit :
+
+    wget https://www.apachefriends.org/xampp-files/7.0.2/xampp-linux-7.0.2-1-installer.run
+
+    sudo chmod +x xampp-linux-7.0.2-1-installer.run
+
+    sudo ./xampp-linux-7.0.2-1-installer.run
+
+
+
+For Ubuntu 64 bit :
+
+    wget https://www.apachefriends.org/xampp-files/7.0.2/xampp-linux-x64-7.0.2-1-installer.run
+
+    sudo chmod +x xampp-linux-x64-7.0.2-1-installer.run
+
+    sudo ./xampp-linux-x64-7.0.2-1-installer.run
+
